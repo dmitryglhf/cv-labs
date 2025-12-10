@@ -1,0 +1,197 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.4"
+  },
+  "cells": [
+    {
+      "id": "bkHC",
+      "code_hash": "35d2c411530c0679ce32fc1e98f1a99c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"task-formulation\">Task Formulation</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "f67a4996a41bd15dd95afdfe601ac8e5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><strong>Semantic Segmentation on Pascal VOC 2012</strong></span>\n<span class=\"paragraph\">Dataset: Pascal VOC 2012 with 20 object classes + background</span>\n<span class=\"paragraph\">Metric: Mean Intersection over Union (mIoU)</span>\n<span class=\"paragraph\">Justification: mIoU measures overlap between predicted and ground truth masks across all classes, making it standard for semantic segmentation evaluation</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "74048007feadc612fb7ca57b54311c28",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"model-architecture\">Model Architecture</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "fecedfce3c8523b50c291af0d1cb7edf",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><strong>DeepLabV3 with ResNet-50 backbone</strong></span>\n<span class=\"paragraph\">Architecture: DeepLabV3 with Atrous Spatial Pyramid Pooling (ASPP)</span>\n<span class=\"paragraph\">Pretraining: ImageNet-1K pretrained ResNet-50 backbone</span>\n<span class=\"paragraph\">Justification: DeepLabV3 achieves strong performance on semantic segmentation tasks through multi-scale feature extraction with atrous convolutions, balancing accuracy and computational efficiency</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "4552ca2d9f66507799cf772bfddfb580",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"training-configuration\">Training Configuration</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "e03244d88b33bfc1351808cf0e52a4c5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><strong>Fixed hyperparameters:</strong></span>\n<ul>\n<li>num_epochs: 50 (sufficient convergence for VOC dataset size)</li>\n<li>num_classes: 21 (20 objects + background)</li>\n<li>image_size: 512 (balance between detail and computational cost)</li>\n<li>pretrained: True (transfer learning accelerates convergence)</li>\n</ul>\n<span class=\"paragraph\"><strong>Tunable hyperparameters:</strong></span>\n<ul>\n<li>learning_rate: [1e-5, 1e-3]</li>\n<li>batch_size: [4, 8, 16]</li>\n<li>optimizer: [Adam, SGD]</li>\n<li>weight_decay: [1e-5, 1e-3]</li>\n</ul>\n<span class=\"paragraph\"><strong>Tuning method:</strong> Optuna with TPE sampler (10 trials)</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "098071a7488ebaceef6fef6a8b81b879",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"hyperparameter-tuning\">Hyperparameter Tuning</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "da2ddfb2c452cc29f03976215a1c2da0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"model-evaluation\">Model Evaluation</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "2b51dcca905aee1ce8f6eaa125c32b8d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"execution-pipeline\">Execution Pipeline</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "ea908e4bf6aed54aa01276470b15491f",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "6c1ff20035c969f7d423705d08f2cbd7",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "9bf6cefe6f49eccb7987a45e73cb5482",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "1cbf4a84df60d7207a799b88ccdbffd8",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "06a04035fa73d7df0992e66c4983eea1",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "b92dac57c649ea01b0b752c04e406f28",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "79956ce3c186468a5e044af4ce86f9ba",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "6b130bd20cc2bd74bfdaa97110e07da4",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "32404ccc03234d5c7f40e0f5b7bad24a",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "a1584e254daf9a4e621c06424418268e",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "b08a35965ea3d756a042a63b6d41e92b",
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
