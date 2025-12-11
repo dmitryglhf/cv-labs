@@ -5,13 +5,18 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "albumentations>=2.0.8",
+    "kagglehub>=0.3.13",
     "logly>=0.1.6",
     "marimo>=0.18.4",
+    "matplotlib>=3.10.8",
+    "monai>=1.5.1",
+    "monai-weekly[ignite,nibabel]>=1.6.dev2549",
     "opencv-python>=4.12.0.88",
     "optuna>=4.6.0",
+    "pandas>=2.3.3",
     "scikit-learn>=1.8.0",
     "torch>=2.9.1",
     "torchaudio>=2.9.1",
     "torchvision>=0.24.1",
+    "tqdm>=4.67.1",
 ]

@@ -20,3 +20,5 @@ best_params.json
 
 # Logs
 *.log
+
+__marimo__/
