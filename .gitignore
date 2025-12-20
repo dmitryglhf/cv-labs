@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Dataset
+VOCdevkit/
+*.tar
+
+# Model weights and outputs
+*.pth
+*.pt
+best_params.json
+
+# Logs
+*.log
+
+__marimo__/
+/data
+/Dataset
+/dataset
